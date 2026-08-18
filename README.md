@@ -1,2 +1,2 @@
-# gencf
+# genCF
 A package to determine nonzero crystal field parameters.
