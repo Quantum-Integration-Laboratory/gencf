@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "gencf"
-version = "0.1.0"
-description = "A package to determine nonzero crystal field parameters"
+version = "0.1.1"
+description = "A package to determine nonzero crystal field parameters from point group symmetries."
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}

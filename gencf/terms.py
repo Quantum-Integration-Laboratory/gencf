@@ -143,10 +143,10 @@ def generate_allowed_terms(symmetry: str) -> Dict[int, Dict[str, Tuple[int, ...]
         real_allowed_terms = []
         imaginary_allowed_terms = []
         for i in range(k + 1):
-            if int(real_allowed[i]) != 0:
+            if real_allowed[i] != 0:
                 real_allowed_terms.append(int(q[i]))
 
-            if int(imaginary_allowed[i]) != 0:
+            if imaginary_allowed[i] != 0:
                 imaginary_allowed_terms.append(int(q[i]))
 
         # Store the allowed terms for the current rank k
