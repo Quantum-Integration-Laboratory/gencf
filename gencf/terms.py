@@ -10,7 +10,7 @@ from typing import Dict, Tuple
 
 from tabulate import tabulate
 
-from symmetry_operations import (
+from .symmetry_operations import (
     Cn_rotation,
     C2_y_rotation,
     improper_rotation,
