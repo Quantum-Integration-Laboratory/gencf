@@ -3,9 +3,7 @@
 This module contains functions for performing various symmetry operations.
 """
 
-import numpy as np
 import sympy as sp
-from typing import Union
 
 from sympy.physics.wigner import wigner_d
 
@@ -75,11 +73,11 @@ def improper_rotation(n: int, vector: sp.Matrix) -> sp.Matrix:
         The transformed vector with non-invariant elements zeroed.
     """
     k = int((vector.shape[0] - 1) / 2)
-    q = sp.Matrix(np.linspace(k, -k, 2 * k + 1, dtype=int))
+    q = sp.Matrix(range(k, -k - 1, -1))
 
     rot_angle = 2 * sp.pi / n
     rot_matrix = wigner_d(sp.Integer(k), rot_angle, 0, 0)
-    sigma_h = sp.diag(*[(-1) ** (k + i) for i in q])
+    sigma_h = sp.diag(*((-1) ** (k + i) for i in q))
 
     vector_rot_refl = sigma_h @ rot_matrix @ vector
     return _zero_nonmatching_elements(vector_rot_refl, vector)
@@ -95,7 +93,7 @@ def horizontal_plane_reflection(vector: sp.Matrix) -> sp.Matrix:
         The reflected vector with non-invariant elements zeroed.
     """
     k = int((vector.shape[0] - 1) / 2)
-    q = sp.Matrix(np.linspace(k, -k, 2 * k + 1, dtype=int))
+    q = sp.Matrix(range(k, -k - 1, -1))
 
     sigma_h = sp.diag(*[(-1) ** (k + i) for i in q])
 
@@ -113,9 +111,9 @@ def vertical_plane_reflection(vector: sp.Matrix) -> sp.Matrix:
         The reflected vector with non-invariant elements zeroed.
     """
     k = int((vector.shape[0] - 1) / 2)
-    q = sp.Matrix(np.linspace(k, -k, 2 * k + 1, dtype=int))
+    q = sp.Matrix(range(k, -k - 1, -1))
 
-    sigma_v = sp.diag(*[(-1) ** i for i in q]).rot90(1)
+    sigma_v = sp.diag(*((-1) ** i for i in q)).rot90(1)
 
     vector_refl = sigma_v @ vector
     return _zero_nonmatching_elements(vector_refl, vector)

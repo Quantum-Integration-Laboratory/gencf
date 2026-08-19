@@ -7,4 +7,4 @@ __version__ = "0.1.0"
 __author__ = "Li Hong Liu"
 __license__ = "MIT"
 
-__all__ = ["symmetry_operations", "generate_allowed_terms"]
+__all__ = ["symmetry_operations", "generate_allowed_terms", "print_allowed_terms"]
