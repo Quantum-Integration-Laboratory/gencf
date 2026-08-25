@@ -12,6 +12,7 @@ To install genCF using PyPI, run the following command:
 pip install gencf
 ```
 
+
 Example Usage
 ------------
 
@@ -39,13 +40,12 @@ Example Usage
 +-----+---------------+-------------------+
 ```
 
+
 Theory
 ------------
 The crystal field Hamiltonian can be written as [[1](#1), [2](#2)]
 
-$
-\displaystyle H_\text{CF} = \sum_{k=2,4,6}\sum_{q=0}^k \text{Re}\bigl[B^k_q\bigl] \left(C^{(k)}_q + (-1)^q C^{(k)}_{-q} \right) + i\text{Im}\bigl[B^k_q\bigl] \left(C^{(k)}_q - (-1)^q C^{(k)}_{-q}\right).
-$
+$\displaystyle H_\text{CF} = \sum_{k=2,4,6}\sum_{q=0}^k \text{Re}\bigl[B^k_q\bigr] \left(C_{q}^{(k)} + (-1)^q C_{-q}^{(k)} \right) + i\text{Im}\bigl[B^k_q\bigr] \left(C_{q}^{(k)} - (-1)^q C_{-q}^{(k)}\right).$
 
 Depending on the site symmetry of the crystal, certain components of the crystal field parameters, or the entire parameter will vanish.
 
@@ -58,10 +58,10 @@ Further reading can be found in the references.
 Notes
 ------------
 - The $z$-axis is taken as the axis of highest symmetry.
-- The $\sigma_v$ symmetry plane lies along the $xz$-plane to make $\text{Im}(B^k_q)$ vanish [[6](#6)].
-- Point groups that do not contain $\sigma_v$ symmetry can be rotated about the $z$-axis to remove the imaginary component of ONE of the $B^k_q$ terms for $q \neq 0$ [[6](#6)].
+- The $xz$-plane is taken to be the $\sigma_v$ symmetry plane to make $\text{Im}(B^k_q)$ vanish [[6](#6)].
+- Point groups that do not contain $\sigma_v$ symmetry can be rotated about the $z$-axis to remove the imaginary component from ONE of the $B^k_q$ terms for $q \neq 0$ [[6](#6)].
     - *NOTE: this has not been performed in the code*
-- The four cubic point groups $T, T_h, T_d, O, O_h$ were to difficult to calculate and the non-vanishing crystal field parameters have been quoted from [[1](#1), [7](#7)].
+- The five cubic point groups $T, T_h, T_d, O, O_h$ were too difficult to calculate, so the non-vanishing crystal field parameters have been quoted from [[1](#1), [2](#2), [7](#7)].
 
 
 References
