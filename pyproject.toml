@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "gencf"
-version = "0.1.1"
-description = "A package to determine nonzero crystal field parameters from point group symmetries."
+version = "0.2.0"
+description = "A package to determine non-vanishing crystal field parameters from point group symmetries."
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
@@ -19,16 +19,20 @@ dependencies = [
     "tabulate>=0.9.0"
 ]
 classifiers = [
-    "Development Status :: 3 - Alpha",
     "Intended Audience :: Science/Research",
     "License :: OSI Approved :: MIT License",
-    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.10",
 ]
 
 [project.urls]
 Homepage = "https://github.com/Quantum-Integration-Laboratory/gencf"
 Repository = "https://github.com/Quantum-Integration-Laboratory/gencf.git"
 Issues = "https://github.com/Quantum-Integration-Laboratory/gencf/issues"
+
+[project.optional-dependencies]
+test = [
+    "pytest>=8.0",
+]
 
 [tool.setuptools]
 packages = ["gencf"]
