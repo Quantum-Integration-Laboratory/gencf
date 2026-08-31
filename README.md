@@ -88,3 +88,17 @@ J. W. Leech and D. J. Newman, How to Use Groups, Repr (Chapman and Hall, London,
 J.-D. Lizarazo-Ferro, T. O. Puel, M. E. Flatté, and R. Zia, Refining spectroscopic calculations for trivalent lanthanide ions: A revised parametric Hamiltonian and open-source solution, Phys. Rev. B 113, 075127 (2026).
 
 
+Citation
+------------
+If you use this software, please cite it as below.
+```bibtex
+@software{Liu_gencf_2026,
+    author = {Liu, Li Hong},
+    license = {MIT},
+    month = aug,
+    title = {{gencf}},
+    url = {https://github.com/Quantum-Integration-Laboratory/gencf},
+    version = {0.2.1},
+    year = {2026}
+}
+```
